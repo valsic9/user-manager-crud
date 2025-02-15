@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Manager</title>
+    <link rel="stylesheet" href="css/style..min.css" />
+    <meta name="description" content="Vanillla JS CRUD project" />
+  </head>
+
+  <body>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <figure class="img-container">
+            <img src="img/4122846.png" alt="users" class="hero__img" />
+          </figure>
+          <h1 class="hero__title">User Manager</h1>
+          <h2 class="hero__subtitle">
+            Create your own user and edit existing ones
+          </h2>
+          <p>Whatever you choose, we give you the tools!</p>
+        </div>
+      </section>
+
+      <section class="app">
+        <div class="container">
+          <form id="form">
+            <header class="form__header">
+              <h3>Fill in your personal details</h3>
+              <p>(or update another's user information)</p>
+            </header>
+            <p class="name">
+              <label for="name">Full name:</label>
+              <input type="text" name="name" id="name" required />
+            </p>
+            <p class="email">
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="email" required />
+            </p>
+            <button type="submit" class="btn btn--form">Send</button>
+          </form>
+
+          <ul id="user-list" class="list"></ul>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="src/main.js" type="module"></script>
+</html>

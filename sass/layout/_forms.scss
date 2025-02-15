@@ -1,0 +1,54 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+#form {
+  margin-bottom: 40px;
+  @include breakpoint(tablethorizontal) {
+    margin-bottom: 50px;
+  }
+  .form__header {
+    margin-bottom: 30px;
+    @include breakpoint(tablethorizontal) {
+      margin-bottom: 40px;
+    }
+  }
+
+  p {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 28px;
+    align-items: center;
+    @include breakpoint(desktop) {
+      margin-bottom: 35px;
+      gap: 20px;
+    }
+    label {
+      color: $grey-color;
+    }
+    input {
+      width: 58%;
+      border-radius: 3px;
+      padding: 5px;
+      border: 1px solid $grey-color;
+      color: black;
+      font-size: 16px;
+      @include breakpoint(tablethorizontal) {
+        width: 40%;
+        font-size: 18px;
+      }
+      @include breakpoint(desktop) {
+        width: 30%;
+      }
+    }
+
+    &.email {
+      margin-bottom: 30px;
+      @include breakpoint(tablethorizontal) {
+        margin-bottom: 35px;
+      }
+      @include breakpoint(desktop) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.hero {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    text-align: center;
+    @include breakpoint(tablethorizontal) {
+      height: 70vh;
+      margin-bottom: 50px;
+    }
+    @include breakpoint(desktop) {
+      height: 90vh;
+    }
+    @include breakpoint(desktopxl) {
+      height: 100vh;
+    }
+
+    .img-container {
+      margin-bottom: 1.5rem;
+      width: 150px;
+      height: 150px;
+      padding: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      //   border: 7px solid;
+      //   border-radius: 55%;
+      //   border-image: $green-gradient;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 55%;
+        padding: 7px;
+        background: $green-gradient;
+        mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        mask-composite: exclude;
+      }
+      .hero__img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    h2 {
+      max-width: 90%;
+
+      @include breakpoint(tablet) {
+        max-width: 60%;
+      }
+      @include breakpoint(tablethorizontal) {
+        max-width: 50%;
+      }
+      @include breakpoint(desktop) {
+        max-width: 40%;
+      }
+    }
+  }
+}

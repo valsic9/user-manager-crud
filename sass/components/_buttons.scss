@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.btn {
+  display: inline-block;
+  padding: 7px 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  @include breakpoint(tablethorizontal) {
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px 20px;
+  }
+  @include breakpoint(desktop) {
+    font-size: 20px;
+  }
+
+  &.btn--form {
+    width: 120px;
+    background: $green-gradient;
+    @include breakpoint(tablethorizontal) {
+      width: 140px;
+      height: 50px;
+    }
+    @include breakpoint(desktop) {
+      width: 160px;
+      height: 55px;
+    }
+
+    &:hover {
+      background: $green-light-color;
+    }
+  }
+
+  &.delete {
+    background: red;
+    &:hover {
+      background: darkred;
+    }
+  }
+
+  &.edit {
+    background: $green-dark-color;
+    &:hover {
+      background: $green-light-color;
+    }
+  }
+}

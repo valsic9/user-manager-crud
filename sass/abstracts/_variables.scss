@@ -1,0 +1,18 @@
+$bp-tablet: 768px;
+$bp-tablet-horizontal: 1024px;
+$bp-desktop: 1200px;
+$bp-desktop-xl: 1440px;
+
+// Font
+$poppins-font: "Poppins", serif;
+
+// Colors
+$grey-color: rgba(255, 255, 255, 0.6);
+$green-light-color: rgb(198, 221, 88);
+$green-dark-color: rgb(95, 188, 76);
+
+$green-gradient: linear-gradient(
+  0deg,
+  $green-light-color 0%,
+  $green-dark-color 100%
+);

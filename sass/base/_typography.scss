@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+body * {
+  font-family: $poppins-font;
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: $green-gradient;
+  color: transparent;
+  background-clip: text;
+
+  @include breakpoint(tablethorizontal) {
+    font-size: 3rem;
+  }
+  @include breakpoint(desktop) {
+    font-size: 3.8rem;
+  }
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  @include breakpoint(tablethorizontal) {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  @include breakpoint(tablethorizontal) {
+    font-size: 1.8rem;
+  }
+}
+
+p {
+  font-size: 16px;
+  color: $grey-color;
+  @include breakpoint(tablethorizontal) {
+    font-size: 18px;
+  }
+  @include breakpoint(desktop) {
+    font-size: 20px;
+  }
+}
